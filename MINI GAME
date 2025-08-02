@@ -15,12 +15,22 @@ def guess_the_number():
         except ValueError:
             print("Please enter valid integers for the range.")
 
+    # Ask the user how many guesses they want
+    while True:
+        try:
+            chances = int(input("How many guesses would you like to have? "))
+            if chances <= 0:
+                print("You must have at least one guess.")
+                continue
+            break
+        except ValueError:
+            print("Please enter a valid number of guesses.")
+
     # Generate the random number
     secret_number = random.randint(lower, upper)
-    chances = 3
 
-    print(f"I'm thinking of a number between {lower} and {upper}.")
-    print(f"You have {chances} chances to guess it.")
+    print(f"\nI'm thinking of a number between {lower} and {upper}.")
+    print(f"You have {chances} chances to guess it.\n")
 
     for attempt in range(1, chances + 1):
         try:
@@ -38,7 +48,8 @@ def guess_the_number():
             print("Too high!")
 
         if attempt == chances:
-            print(f" Sorry! You've used all your chances. The number was {secret_number}.")
+            print(f"\n😞 Sorry! You've used all your chances. The number was {secret_number}.")
 
 # Run the game
 guess_the_number()
+
