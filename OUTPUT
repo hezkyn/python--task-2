@@ -1,0 +1,14 @@
+Welcome to the Number Guessing Game!
+Enter the lower bound of the number range: 3
+Enter the upper bound of the number range: 7
+How many guesses would you like to have? 3
+
+I'm thinking of a number between 3 and 7.
+You have 3 chances to guess it.
+
+Attempt 1: Enter your guess: 5
+Too high!
+Attempt 2: Enter your guess: 4
+Too high!
+Attempt 3: Enter your guess: 3
+ Congratulations! You guessed the number correctly!
